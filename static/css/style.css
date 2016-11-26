@@ -5,7 +5,7 @@ html, body, .container {
 }
 
 h1, h2 {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Courier New', sans-serif;
     font-weight: 500;
     letter-spacing: 2px;
 }
@@ -187,17 +187,18 @@ table{
 
 .btn-outlined.btn-theme {
     background: none;
-    color: #545454;
-    border-color: #545454;
+    color: #000;
+    border-color: #000;
     background-image: none;
-    border: 3px solid;
+    border: 3px dashed;
 }
 
 .btn-outlined.btn-theme:hover,
 .btn-outlined.btn-theme:active {
-    color: #FFF;
-    background: #545454;
-    border-color: #545454;
+    color: #000;
+    background: #fff;
+    border-color: #000;
+    border: solid;
 }
 
 .navbar-inverse {
@@ -207,7 +208,7 @@ table{
 }
 
 .jumbotron {
-    background-color: #545454;
+    background-color: #FFF;
     color: #FFF;
     padding: 0px 0px 25px;
 }
@@ -219,6 +220,7 @@ table{
 
 .home h1 {
     font-size: 48px !important;
+    color: #000;
 }
 
 .navbar {
@@ -262,7 +264,7 @@ table{
     border: none;
     border-radius: 0;
     background: #f0f0f0;
-    color: #aaa;
+    color: #000;
     font-weight: 400;
     font-family: "Avenir Next", "Helvetica Neue", Helvetica, Arial, sans-serif;
     -webkit-appearance: none; /* for box shadows to show on iOS */
@@ -312,8 +314,8 @@ table{
 
 .input-field {
     width: 100%;
-    background-color: #eee;
-    border: 2px solid transparent;
+    background-color: #fff;
+    border: 3px dashed;
     -webkit-transition: background-color 0.3s, border-color 0.3s;
     transition: background-color 0.3s, border-color 0.3s;
 }
@@ -352,7 +354,8 @@ table{
 .input-field:focus + .input-field,
 .input--filled .input-field {
     background-color: transparent;
-    border-color: #a3d39c;
+    border-color: #000;
+    border: solid;
 }
 
 .input--hide {
@@ -362,6 +365,7 @@ table{
 #submit {
     position: relative;
     right: -15px;
+    font-family: "Courier New", sans-serif;
 }
 
 .done-row {
@@ -369,7 +373,7 @@ table{
 }
 
 .line {
-    padding: 210px 0;
+    padding: 215px 0;
     padding-bottom: 20px;
 }
 
@@ -410,6 +414,42 @@ table{
     padding: 15px;
     text-align: center;
     width: 100%;
+}
+
+.error{
+    background-color: #fff;
+    border-color: #fff;
+    padding:0px;
+    color:#000;
+    font-size: 15px;
+    text-align: center;
+}
+
+#register{
+    background-color: #fff;
+    border-color: #fff;
+    padding:0px;
+    color:#000;
+    font-size: 15px;
+    text-align: center;
+}
+
+#login{
+    background-color: #fff;
+    border-color: #fff;
+    padding:0px;
+    color:#000;
+    font-size: 15px;
+    text-align: center;
+}
+
+#scoreboard{
+    background-color: #fff;
+    border-color: #fff;
+    padding:0px;
+    color:#000;
+    font-size: 15px;
+    text-align: center;   
 }
 .navbar-brand {float:none;}
 /* END OF INPUT CSS */

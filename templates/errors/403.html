@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="row">
+	<pre class="error"></pre>
+    <h2 style="text-align:center;">I don't think you're allowed here</h2>
+    <h2 style="text-align:center;">Not so sorry about that</h2>
+</div>
+<script src="{{ request.script_root }}/static/{{ ctf_theme() }}/js/vendor/jquery.min.js"></script>
+<script src="{{ request.script_root }}/static/{{ ctf_theme() }}/js/vendor/figlet.js"></script>
+<script src="{{ request.script_root }}/static/{{ ctf_theme() }}/js/vendor/jquery.figlet.js"></script>
+<script>
+$(function() {
+			$(".error").figlet("No Permission");
+		});
+</script>
+
+{% endblock %}
+
+{% block scripts %}
+{% endblock %}
