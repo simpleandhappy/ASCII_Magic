@@ -3,17 +3,16 @@
 {% block content %}
 <div class="jumbotron home">
     <div class="container">
-        <pre id="scoreboard"></pre>
+        <pre id="scoreboard_title"></pre>
     </div>
 </div>
 <div class="container main-container">
     <div id="score-graph"></div>
     <br>
-
-    <table id="scoreboard" class="table table-striped">
+    <table id="scoreboard" style="display: none">
         <thead>
             <tr>
-                <td width="10px"><b>Place</b>
+                <td><b>Place</b>
                 </td>
                 <td><b>Team</b>
                 </td>
@@ -28,18 +27,20 @@
         </tbody>
     </table>
 </div>
+<div id="ascii-table"></div>
 {% endblock %}
 
 {% block scripts %}
     <script src="{{ request.script_root }}/static/{{ ctf_theme() }}/js/vendor/plotly.min.js"></script>
     <script src="{{ request.script_root }}/static/{{ ctf_theme() }}/js/utils.js"></script>
     <script src="{{ request.script_root }}/static/{{ ctf_theme() }}/js/scoreboard.js"></script>
-    <script src="{{ request.script_root }}/static/{{ ctf_theme() }}/js/vendor/figlet.js"></script>
-<script src="{{ request.script_root }}/static/{{ ctf_theme() }}/js/vendor/jquery.figlet.js"></script>
-<script>
-$(function() {
-            $("#scoreboard").figlet("Scoreboard");
+    <script src="{{ request.script_root }}/static/{{ ctf_theme() }}/js/vendor/jquery.ascii.js"></script>
+    <script>
+        $(function() {
+            $("#scoreboard_title").figlet("Scoreboard");
         });
-</script>
-
+        $(document).ready(function() {
+            $("#ascii-table").html($("#scoreboard").ascii());
+        }); 
+    </script>
 {% endblock %}

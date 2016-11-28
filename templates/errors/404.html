@@ -3,7 +3,7 @@
 {% block content %}
 
 <div class="row">
-    <pre class="error"></pre>
+    <pre id="not_found"></pre>
     <h2 style="text-align:center;">Whoops, looks like we can't find that.</h2>
     <h2 style="text-align:center;">Sorry about that</h2>
 </div>
@@ -12,7 +12,7 @@
 <script src="{{ request.script_root }}/static/{{ ctf_theme() }}/js/vendor/jquery.figlet.js"></script>
 <script>
 $(function() {
-			$(".error").figlet("Not Found");
+			$("#not_found").figlet("Not Found");
 		});
 </script>
 

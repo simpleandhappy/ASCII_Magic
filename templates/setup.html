@@ -6,7 +6,7 @@
 {% block content %}
 <div class="jumbotron home">
     <div class="container">
-        <h1>Setup</h1>
+        <pre id="setup"></pre>
     </div>
 </div>
 <div class="container main-container">
@@ -64,4 +64,11 @@
 
 {% block scripts %}
     <script src="{{ request.script_root }}/static/{{ ctf_theme() }}/js/style.js"></script>
+    <script src="{{ request.script_root }}/static/{{ ctf_theme() }}/js/vendor/figlet.js"></script>
+    <script src="{{ request.script_root }}/static/{{ ctf_theme() }}/js/vendor/jquery.figlet.js"></script>
+    <script>
+    $(function() {
+            $("#setup").figlet("Setup");
+        });
+    </script>
 {% endblock %}
