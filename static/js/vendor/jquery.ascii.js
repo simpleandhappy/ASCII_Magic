@@ -10,7 +10,7 @@
 (function ($) {
 	$.fn.ascii = function(format) {
 		var newline = "<br/>";
-		var space = "&nbsp;";
+		var space = " ";
 
 		if (format == "raw") {
 			newline = "\n";
@@ -40,16 +40,16 @@
 				while(line[column]) column++;
 
 				for (var i = column; i < column + span.col; i++) {
-					line[i] = $(this).html();
+					line[i] = $(this).text();
 
 					if (lengths[i] == undefined
-						|| $(this).html().length > lengths[i]) {
-						lengths[i] = $(this).html().length;
+						|| $(this).text().length > lengths[i]) {
+						lengths[i] = $(this).text().length;
 					}
 
 					for (var j = row + 1; j < row + span.row; j++) {
 						var next = data[j] || [];
-						next[i] = $(this).html();
+						next[i] = $(this).text();
 						data[j] = next;
 					}
 				}
