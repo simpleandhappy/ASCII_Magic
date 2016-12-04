@@ -11,7 +11,7 @@
     <br>
     <table id="scoreboard" style="display: none">
         <thead>
-            <tr> <td><b>Place</b></td><td><b>Team</b></td><td><b>Score</b></td>
+            <tr> <th>Place</th><th>Team</th><th>Score</th>
             </tr>
         </thead>
         <tbody>
@@ -21,7 +21,7 @@
         </tbody>
     </table>
 </div>
-<pre id="ascii-table"></pre>
+<pre class="ascii-table"></pre>
 {% endblock %}
 
 {% block scripts %}
@@ -34,7 +34,8 @@
             $("#scoreboard_title").figlet("Scoreboard");
         });
         $(document).ready(function() {
-            $("#ascii-table").text($("#scoreboard").ascii("raw"));
+            var table = $(".ascii-table").html($("#scoreboard").ascii());
+            console.log(table);
         }); 
     </script>
 {% endblock %}

@@ -17,6 +17,13 @@ td {
     text-align: center;
 }
 
+th{
+    padding: 15px !important;
+    border-style: none !important;
+    background-color: #fff;
+    text-align: center;   
+}
+
 a {
     outline: 0;
 }
@@ -473,6 +480,42 @@ table{
     text-align: center;   
 }
 
+#challenges-title{
+    background-color: #fff;
+    border-color: #fff;
+    padding:0px;
+    color:#000;
+    font-size: 15px;
+    text-align: center;   
+}
+
+#profile{
+    background-color: #fff;
+    border-color: #fff;
+    padding:0px;
+    color:#000;
+    font-size: 15px;
+    text-align: center;   
+}
+
+#teams{
+    background-color: #fff;
+    border-color: #fff;
+    padding:0px;
+    color:#000;
+    font-size: 15px;
+    text-align: center;   
+}
+
+#team-id{
+    background-color: #fff;
+    border-color: #fff;
+    padding:0px;
+    color:#000;
+    font-size: 15px;
+    text-align: center;   
+}
+
 .ends{
     margin-right: -10px;
     padding: 0px;
@@ -488,11 +531,13 @@ table{
     text-align: left;
 }
 
-#ascii-table{
+.ascii-table{
     text-align: center;
     font-family: "Courier New", sans-serif;
     font-size: 12pt;
     display: block;
+    background-color: #fff;
+    border-color: #fff;
 }
 .navbar-brand {float:none;}
 /* END OF INPUT CSS */
